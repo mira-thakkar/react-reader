@@ -19,7 +19,7 @@ class EpubView extends PureComponent {
   componentDidMount () {
     const {url, tocChanged} = this.props
     // use empty options to avoid ArrayBuffer urls being treated as options in epub.js
-    const epubOptions = {}
+    const epubOptions = this.props.epubOptions
     this.book = new Epub(url, epubOptions)
     this.book.loaded.navigation.then(({toc}) => {
       this.setState({

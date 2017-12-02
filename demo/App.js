@@ -90,6 +90,9 @@ class App extends Component {
             locationChanged={this.onLocationChanged}
             title={'Alice in wonderland'}
             location={location}
+            epubOptions={{requestHeaders: {
+              Authorization: 'Bearer Mira'
+            }}}
             getRendition={this.getRendition}
           />
         </div>
